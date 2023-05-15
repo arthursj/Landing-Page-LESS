@@ -1,0 +1,326 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+* button {
+  cursor: pointer;
+}
+* a {
+  text-decoration: none;
+  color: white;
+}
+* li {
+  list-style-type: none;
+}
+body,
+button,
+input,
+textarea {
+  font: 400 16px 'Rubik', sans-serif;
+}
+body {
+  background-color: #070A4E;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .main-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1120px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+body .main-header-container img::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body .main-header-container .header-navigation-container {
+  display: flex;
+  gap: 25px;
+}
+body .main-header-container .header-navigation-container .header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+body .main-header-container .header-navigation-container .header-navigation li {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+}
+body .main-header-container .header-navigation-container .header-navigation li .active {
+  font-weight: 600;
+}
+body .main-header-container .header-navigation-container .header-navigation li a {
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+}
+body .main-header-container .header-navigation-container .header-navigation li a::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body .main-header-container .header-navigation-container .header-navigation li a:hover {
+  color: #E32934;
+}
+body .purchase-button {
+  font: 500 12px 'Inter', sans-serif;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: white;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 32px;
+  padding-left: 32px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-radius: 50px;
+  transition: background-color 1s, border-color 1s;
+}
+body .purchase-button:hover {
+  background-color: #e42e38;
+  border-color: #e42e38;
+}
+body .purchase-button::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body main {
+  width: 100%;
+  max-width: 1120px;
+  margin-top: 72px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 16px;
+  padding-left: 16px;
+  display: flex;
+}
+body main .main-section {
+  max-width: 645px;
+  padding-left: 40px;
+}
+body main .main-title {
+  font-weight: 500;
+  font-size: 48px;
+}
+body main .main-title::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body main .main-description {
+  margin-top: 18px;
+  font-weight: 300;
+}
+body main .main-description::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body main .nutritional-container {
+  margin-top: 47px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body main .nutritional-container .nutritional-title {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+body main .nutritional-container .nutritional-title::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body main .nutritional-container .nutritional-items-container {
+  display: flex;
+  gap: 15px;
+}
+body main .nutritional-container .nutritional-items-container li {
+  width: 117px;
+}
+body main .nutritional-container .nutritional-items-container li div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 0;
+  padding-left: 0;
+  background-color: #252872;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+body main .nutritional-container .nutritional-items-container li div span::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body main .nutritional-container .nutritional-items-container li div strong {
+  font-weight: 600;
+  font-size: 24px;
+}
+body main .nutritional-container .nutritional-items-container li div strong::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body main .nutritional-container .nutritional-items-container li footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 0;
+  padding-left: 0;
+  background-color: #646693;
+  display: flex;
+  justify-content: center;
+}
+body main .nutritional-container .nutritional-items-container li footer span::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body main .nutritional-container .nutritional-detail {
+  font-weight: 300;
+  font-size: 14px;
+  max-width: 375px;
+}
+body main .nutritional-container .nutritional-detail::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body .nutritional-purchase-button {
+  margin-top: 63px;
+}
+body .pepsi-images-container {
+  flex: 1;
+  position: relative;
+}
+body .pepsi-images-container .little-can {
+  position: absolute;
+  bottom: 0;
+  right: 202px;
+}
+body .pepsi-images-container .little-can::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body .pepsi-images-container .large-can {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+body .pepsi-images-container .large-can::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body .pepsi-images-container .can-shadow {
+  position: absolute;
+  right: 0;
+  top: 86%;
+  z-index: -1;
+}
+body .pepsi-images-container .can-shadow::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body .info-right-bottom-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 110px;
+  background-color: #646693;
+  padding-bottom: 18px;
+}
+body .info-right-bottom-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-right: 12px;
+  padding-left: 12px;
+  background-color: #252872;
+}
+body .info-right-bottom-container div strong {
+  font-weight: 500;
+  font-size: 23px;
+}
+body .info-right-bottom-container div strong::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body .info-right-bottom-container div small {
+  margin-top: 2px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 300;
+}
+body .info-right-bottom-container div small::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body .info-right-bottom-container div span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+body .info-right-bottom-container div span::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body .social-medias-container {
+  position: fixed;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .social-medias-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+body .social-medias-container ul img::selection {
+  background-color: #ffffff;
+  color: #252872;
+}
+body .background-blur {
+  background-color: #ffffff;
+  width: 370px;
+  height: 370px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  filter: blur(180px);
+  z-index: -1;
+}
+.font2 {
+  font-family: 'Inter', sans-serif;
+}
+.box-s {
+  box-sizing: border-box;
+}
+.cursor-p {
+  cursor: pointer;
+}
+.font3 {
+  font: 500 12px 'Inter', sans-serif;
+}
+.border-r {
+  border-radius: 50px;
+}
+.transition1 {
+  transition: background-color 1s, border-color 1s;
+}

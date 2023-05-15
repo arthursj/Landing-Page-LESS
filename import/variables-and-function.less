@@ -1,0 +1,347 @@
+@blue-dark: #070A4E;
+@blue-medium: #252872;
+@blue-light: #646693;
+@red: #E32934;
+@white: #ffffff;
+
+@new-red: lighten(@red, 1%);
+
+
+@bg1: white;
+@color1: boolean(luma(@bg1) > 50%);
+
+.cor1() {
+    color: if(@color1, white, inherit);
+}
+.cor2() {
+    color: if(@color2, inherit, white);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@none1: none;
+@decoration1: decoration;
+@style1: style;
+@type1: type;
+
+.property0(@a) when (@a = "text-d") {
+    text-@{decoration1}: @none1;
+}
+.property0(@a) when (@a = "list-s") {
+    list-@{style1}-@{type1}: @none1;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@font1: @valor1;
+@font2: @valor2;
+@font3: 'Rubik', sans-serif;
+
+.font1() {
+    font: @font1 @font2 @font3;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@width1: width;
+
+.max-width0(@b) when (@b = 1) {
+    max-@{width1}: @valor3;
+}
+.max-width0(@b) when (@b = 2) {
+    max-@{width1}: @valor4;
+}
+.max-width0(@b) when (@b = 3) {
+    max-@{width1}: @valor5;
+}
+#max-width0(@b) when (@b = 4) {
+    max-@{width1}: @valor6;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.height1(@a) when (@a > 1) {
+    height: @valor7;
+} 
+.height1(@a) when not (@a > 1) {
+    height: @valor8;
+} 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Variable
+
+@property: color;
+@0: 0;
+
+#flex() {
+    exibir: flex;
+}
+
+@d1: direction;
+@justify-c1: justify-content;
+
+@align-i: align-items;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.flex1(@a) when (@a = 1) {
+    display: #flex[exibir];
+} 
+.flex1(@a) when (@a = 2) {
+    display: #flex[exibir];
+    flex-@{d1}: column;
+    @{justify-c1}: if((3 = 3), center, space-between);
+}
+.flex1(@a) when (@a = 3) {
+    display: #flex[exibir];
+    @{justify-c1}: if((3 = 2), center, space-between);
+    @{align-i}: if((4 = 4), center, flex-start);
+}
+.flex1(@a) when (@a = 4) {
+    display: #flex[exibir];
+    gap: if((3 = 3), 25px, 15px);
+} 
+.flex1(@a) when (@a = 5) {
+    display: #flex[exibir];
+    @{align-i}: if((4 = 4), center, flex-start);
+    gap: if((3 = 2), 25px, 15px);
+}
+.flex1(@a) when (@a = 6) {
+    display: #flex[exibir];
+    flex-@{d1}: column;
+    gap: if((3 = 3), 12px, 35px);
+}
+.flex1(@a) when (@a = 7) {
+    display: #flex[exibir];
+    gap: if((3 = 2), 25px, 15px);
+}
+.flex1(@a) when (@a = 8) {
+    display: #flex[exibir];
+    @{justify-c1}: if((3 = 3), center, space-between);
+}
+.flex1(@a) when (@a = 9) {
+    display: #flex[exibir];
+    flex-@{d1}: column;
+    @{align-i}: if((4 = 3), center, flex-start);
+}
+.flex1(@a) when (@a = 10) {
+    display: #flex[exibir];
+    flex-@{d1}: column;
+    @{align-i}: if((4 = 4), center, flex-start);
+    gap: if((3 = 4), 12px, 35px);
+}
+.flex1(@a) when (@a = 11) {
+    display: #flex[exibir];
+    flex-@{d1}: column;
+    @{align-i}: if((4 = 4), center, flex-start);
+    gap: if((4 = 4), 12px, 35px);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@fm1: family;
+@fm2: 'Inter', sans-serif;
+
+.font2{
+    font-@{fm1}: @fm2;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@paddingg: padding;
+
+#pd-1() {
+    pad-1: @valor9;
+}
+#pd-1() {
+    pad-2: @valor34;
+}
+
+.padding1(@value1: padding-top, @value1: padding-bottom, @value2: padding-right, @value2: padding-left) {
+    padding-top: @value1; 
+    padding-bottom: @value1;
+    padding-right: @value2;
+    padding-left: @value2;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@marginn: margin;
+
+#marg-1() {
+    marg-1: @valor9;
+}
+
+.margin1(@value1: margin-top, @value1: margin-bottom, @value2: margin-right, @value2: margin-left) {
+    margin-top: @value1; 
+    margin-bottom: @value1;
+    margin-right: @value2;
+    margin-left: @value2;
+}
+
+.margin2(@value1: margin-top; @value2: margin-right; @value2: margin-left; @value3: margin-bottom) {
+    margin-top: @value1; 
+    margin-right: @value2;
+    margin-left: @value2;
+    margin-bottom: @value3;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.box-s {
+    box-sizing: border-box;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.cursor-p {
+    cursor: pointer;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@position1 : position;
+
+@position-f:  fixed;
+@position-r: relative;
+@position-a: absolute;
+
+.position1(@c) when (@c = 1) {
+    @{position1}: @position-f;
+} 
+#position1(@c) when (@c = 1) {
+    @{position1}: @position-r;
+}
+.position1(@c) when (@c = 3) {
+    @{position1}: @position-a;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@left1: left;
+
+.left1(@d) when (@d = 0) {
+    @{left1}: @valor9;
+}
+.left1(@d) when not (@d = 0) {
+    @{left1}: @valor11;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@top1: top;
+
+.top1(@e) when (@e = 0) {
+    @{top1}: @valor9;
+}
+.top1(@e) when (@e = 1) {
+    @{top1}: @valor12;
+}
+.top1(@e) when (@e = 2) {
+    @{top1}: @valor13;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@right1: right;
+
+.right1(@f) when (@f = 0) {
+    @{right1}: @valor9;
+}
+.right1(@f) when not (@f = 0) {
+    @{right1}: @valor14;
+}
+
+@rightt: @valor9;
+@rightt1: @rightt;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@fm5: 'Inter', sans-serif;
+
+.font3 {
+    font: @valor15 @valor16 @fm5;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@transf1: transform;
+
+#text-t() {
+    t-t: uppercase;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@weight1: weight;
+
+.font-w1(@g) when (@g = 0) {
+    font-@{weight1}: @valor17;
+}
+.font-w1(@g) when (@g = 1) {
+    font-@{weight1}: @valor15;
+}
+.font-w1(@g) when (@g = 2) {
+    font-@{weight1}: @valor18;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.border1(@value1, @value2, @value3)  {
+    border-width: @value1;
+    border-style: @value2;
+    border-color: @value3;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.border-r {
+    border-radius: @valor19;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.transition1 {
+    transition: background-color 1s, border-color 1s;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@width0 : width;
+
+.width1(@h) when (@h = 1) {
+    @{width0}: @valor20;
+} 
+.width1(@h) when (@h = 2) {
+    @{width0}: @valor21;
+}
+.width1(@h) when (@h = 3) {
+    @{width0}: @valor22;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@padding-l: padding-left;
+@p-l: @valor23;
+
+#pd-2() {
+    pad-2: @p-l;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@s1: size;
+
+.font-s0(@i) when (@i = 1) {
+    font-@{s1}: @valor24;
+} 
+.font-s0(@i) when (@i = 2) {
+    font-@{s1}: @valor25;
+} 
+.font-s0(@i) when (@i = 3) {
+    font-@{s1}: @valor26;
+} 
+.font-s0(@i) when (@i = 4) {
+    font-@{s1}: @valor27;
+} 
+.font-s0(@i) when (@i = 5) {
+    font-@{s1}: @valor28;
+} 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mt-0: top;
+
+.margin-t(@j) when (@j = 1) {
+    margin-@{mt-0}: @valor29;
+}
+.margin-t(@j) when (@j = 2) {
+    margin-@{mt-0}: @valor30;
+}
+.margin-t(@j) when (@j = 3) {
+    margin-@{mt-0}: @valor31;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#flex1() {
+    um: @valor32;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@bottom-1: bottom;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@i1: index;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@bottom1: bottom;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.transf-tY(@value1) {
+    transform: translateY(@value1);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@f1: filter;
+@b1: 180px;
+
+#blur1() {
+    b1: blur(@b1);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#sele-c() {
+    background-color: @white;
+    color: @blue-medium;
+}
